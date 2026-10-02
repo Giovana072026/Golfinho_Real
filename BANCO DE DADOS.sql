@@ -34,3 +34,23 @@ FOREIGN KEY (id_piloto) REFERENCES pilotos(id_piloto),
 FOREIGN KEY (id_bateria) REFERENCES baterias(id_bateria), 
 FOREIGN KEY (id_kart) REFERENCES karts(id_kart)
 ); 
+
+INSERT INTO baterias (nome, valor, duracao_minutos) VALUES
+('Treino Livre', 99.90, 15),
+('Sprint Race', 149.90, 25),
+('Grand Prix GP', 199.90, 40);
+
+INSERT INTO karts(numero, categoria, potencia_hp) VALUES
+(12, 'Rental Padrao', '6.5 HP'),
+(27, 'Rental Padrao', '6.5 HP'),
+(44, 'Profissional 2T', '13 HP');
+
+INSERT INTO pilotos (nome, cpf, telefone, data_nascimento) VALUES
+('João Souza', '111.222.333.44', '41-99999-3333', '1979-12-14'),
+('Marilia Ferreira', '555.666.777.88', '41-99999-2222', '1985-04-27'),
+('Adriano Rocha', '999.000.111.22', '41-77787-8787', '2002-06-03');
+
+INSERT INTO reservas (id_piloto, id_bateria, id_kart) VALUES
+(1,2,1),
+(2,3,2),
+(3,1,3);
